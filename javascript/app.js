@@ -40,6 +40,7 @@ function datosPersonas () {
 
         personas.push(persona)
         console.log(persona)
+        renderizarTarjetas()
 
     }
       
@@ -61,4 +62,33 @@ function rifa() {
     // Acceder al objeto ganador
     let ganador = personas[indiceGanador]
 
+}
+
+function renderizarTarjetas() {
+    const contenedorTarjetas = document.getElementById("ContanedorTarjetas")
+    contenedorTarjetas.innerHTML = ""
+    personas.forEach(persona => {
+        const tarjeta = document.createElement("div")
+        tarjeta.classList.add("tarjetas")
+        tarjeta.innerHTML = `
+            <h3>${persona.nombre}</h3>
+            <p>Cédula: ${persona.cedula}</p>
+            <p>Fecha de Nacimiento: ${persona.fechaNacimiento}</p>
+            <p>Ciudad de Residencia: ${persona.ciudadResidencia}</p>
+            <p>Ciudad de Origen: ${persona.ciudadOrigen}</p>
+        `
+        contenedorTarjetas.appendChild(tarjeta)
+    })
+
+}
+
+
+function mostrarSeccion(id, evento) {
+  evento.preventDefault()   
+
+  document.querySelectorAll('.seccion').forEach(s => {
+    s.classList.remove('activa')
+  })
+
+  document.getElementById(id).classList.add('activa')
 }
