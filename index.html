@@ -4,55 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Radiorating</title>
 </head>
 <body>
     <main>
         <header>
-            <h1>header</h1>
+            <div>
+                <h1 id="tituloHeader">
+                    RADIO
+                    <span class="tituloHeaderspan">
+                        RATING
+                    </span>
+                </h1>
+                <p>
+                    Encuesta de gustos musicales para conocer el rating de canciones y artistas más escuchados
+                </p>
+            </div>
+
+            <div id="estadisticas">
+                <div id="contadorPersonas" class="estad">
+                    <span class="numero">
+                        0
+                    </span>
+                    <span class="texto">
+                        REGISTRADAS
+                    </span>
+                </div>
+
+                <div class="estad">
+                    <span class="numero">
+                        6
+                    </span>
+                    <span class="texto">
+                        CUPO TOTAL
+                    </span>
+                </div>
+
+                <div class="estad">
+                    <span class="numero">
+                        0
+                    </span>
+                    <span class="texto">
+                        CANCIONES
+                    </span>
+                </div>
+            </div>
         </header>
+
         <aside>
             <nav>
+                <h2>
+                    Menú
+                </h2>
                 <ul>
-                    <li><a href="#">Agregar persona</a></li>
-                    <li><a href="#">Ver todos</a></li>
-                    <li><a href="#">Buscar posicion</a></li>
-                    <li><a href="#">Ganador rifa</a></li>   
+                    <li>
+                        <a href="#formulario" class="bton">
+                            Agregar persona
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#todos" class="bton">
+                            Ver todos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#buscar" class="bton">
+                            Buscar posicion
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#gana" class="bton">
+                            Ganador rifa
+                        </a>
+                    </li>   
                 </ul>
             </nav>
-        </aside>   
+        </aside>  
+
         <section>
             <div id="formulario" class="formulario">
                 <div>
-                    <h2>Agregar Persona</h2>
-                    <p>Complete todos los campos. Canciones opcionales (Máx.3).</p>
+                    <h2>
+                        Agregar Persona
+                    </h2>
+                    <p>
+                        Complete todos los campos. Canciones opcionales (Máx.3).
+                    </p>
                 </div>
+
                 <form id= "formPersonas" action="">
-                    <label for="nombre"> Nombre Completo
+                    <label for="nombre">
+                         Nombre Completo
                         <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
                     </label>
-                    <label for="cedula"> Número de Cédula
+                    
+                    <label for="cedula"> 
+                        Número de Cédula
                         <input type="text" id="cedula" name="cedula" placeholder="Ej: 1234567890" required pattern="\d{10}" title="Debe contener exactamente 10 números" minlength="1" maxlength="12">
                     </label>
-                    <label for="fechaNacimiento"> Fecha de Nacimiento
+
+                    <label for="fechaNacimiento">
+                        Fecha de Nacimiento
                         <input type="date" id="fechaNacimiento" name="fechaNacimiento" placeholder="Ej: 01/01/1990" required>
                     </label>
-                    <label for="email"> Correo Electrónico
+
+                    <label for="email"> 
+                        Correo Electrónico
                         <input type="email" id="email" name="email" placeholder="Ej: correo@ejemplo.com" minlength="4"
                         maxlength="64" required>
                     </label>
-                    <label for="ciudadResidencia"> Ciudad de Residencia
+
+                    <label for="ciudadResidencia"> 
+                        Ciudad de Residencia
                         <input type="text" id="ciudadResidencia" name="ciudadResidencia" placeholder="Ej: Bogotá" required pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
                     </label>
-                    <label for="ciudadOrigen"> Ciudad de Origen
+
+                    <label for="ciudadOrigen"> 
+                        Ciudad de Origen
                         <input type="text" id="ciudadOrigen" name="ciudadOrigen" placeholder="Ej: Medellín" required pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
                     </label>
 
-                      <div>
-                            <div>
-                                <h3>canciones Favoritas</h3>
-                            </div>
-                            <div> 1
+                    <div>
+                        <div>
+                            <h3>
+                                canciones Favoritas
+                            </h3>
+                        </div>
+
+                        <div> 
+                            1
                         <label for="artista1"> 
                             <input type="text" id="artista1" name="artista1" placeholder="Ej: Héctor Lavoe" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
                         </label>
@@ -65,7 +145,9 @@
                             <input type="text" id="genero1" name="genero1" placeholder="Ej: Salsa" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
                         </label>
                         </div>
-                        <div> 2
+
+                        <div> 
+                            2
                          <label for="artista2"> 
                             <input type="text" id="artista2" name="artista2" placeholder="Ej: Duran Duran" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
                         </label>
@@ -73,25 +155,57 @@
                         <label for="cancion2"> 
                             <input type="text" id="cancion2" name="cancion2" placeholder="Ej: Come Undone " pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
                         </label>
+
                         <label for="genero2"> 
                             <input type="text" id="genero2" name="genero2" placeholder="Ej: rock-pop" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
                         </label>
                         </div>
-                        <div> 3
+                        
+                        <div> 
+                            3
                         <label for="artista3"> 
                             <input type="text" id="artista3" name="artista3" placeholder="Ej: Silvio Rodriguez" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
                         </label>
+
                         <label for="cancion3"> 
                             <input type="text" id="cancion3" name="cancion3" placeholder="Ej: Quien Fuera " pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
                         </label>
+
                         <label for="genero3"> 
                             <input type="text" id="genero3" name="genero3" placeholder="Ej: Protesta " pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
                         </label>
-
-
                       </div>  
+                    <button type="submit">
+                        Agregar Persona
+                    </button>
+                </form>
 
-                    <button type="submit">Agregar Persona</button>
+            </div>
+                <div id="tarjetas"> 
+                    <h2>
+                        PERSONAS REGISTRADAS
+                    </h2>
+                    <p>
+                        Lista completa de los encuestados y sus canciones favoritas.
+                    </p>
+                </div>
+                <div class="Contanedor tarjetas">
+                    <div class="tarjetas">
+                     <!-- Aquí se mostrarán las tarjetas de las personas registradas -->   
+                    </div>
+                </div>
+
+            <div id="Buscador">
+                <h3>
+                    BUSCAR POR POSICION
+                </h3>
+
+               <form action="" id="formBuscar">     
+                <input type="number" id="posicion" name="posicion"
+                placeholder="Ej: 1" required min="1" max="6">
+                <button type="submit">
+                    Buscar
+                </button>
                 </form>
             </div>
         </section>
