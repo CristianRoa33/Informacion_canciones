@@ -435,6 +435,8 @@ input {
     align-items: right;
     justify-content: center;
     padding: 1rem 0 0 5rem;
+    color: var(--color-secundario);
+    font-family: var(--font-secundario);
 }
 
 #ganadorRifa h3 {
@@ -457,3 +459,4 @@ input {
     margin: 3rem 0 0 0.5rem;
     color: var(--text-primary);
 }
+

@@ -48,13 +48,25 @@ function datosPersonas () {
         }
       personas.push(persona)
             limpiarFormulario()
-            console.log(persona)
+            actualizarContadores()
             renderizarTarjetas()
             mostrarSeccion('lista')
             buscarPorPosicion()
-           
+           console.log(persona)
     }
 
+}
+
+function actualizarContadores() {
+  // contador personas
+  document.getElementById('contadorPersonas').querySelector('.numero').textContent = personas.length
+
+  // contador canciones
+  const totalCanciones = personas.reduce((acc, persona) => {
+    return acc + persona.canciones.length
+  }, 0)
+
+  document.getElementById('contadorCanciones').textContent = totalCanciones
 }
 
 
@@ -107,14 +119,16 @@ function renderizarTarjetas() {
     contenedorTarjetas.innerHTML = ""
     personas.forEach(persona => {
         const tarjeta = document.createElement("div")
-        tarjeta.classList.add("tarjetas")
+        
         tarjeta.innerHTML = `
+            <div class="tarjetas">
             <h3>${persona.nombre}</h3>
             <p>Cédula: ${persona.cedula}</p>
             <p>Fecha de Nacimiento: ${persona.fechaNacimiento}</p>
             <p>Correo Electrónico: ${persona.email}</p>
             <p>Ciudad de Residencia: ${persona.ciudadResidencia}</p>
             <p>Ciudad de Origen: ${persona.ciudadOrigen}</p>
+            </div>
         `
         contenedorTarjetas.appendChild(tarjeta)
     })
