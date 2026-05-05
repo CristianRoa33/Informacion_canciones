@@ -63,17 +63,17 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" id="verTodos" class="bton" onclick="mostrarSeccion('lista', event)">
+                        <a href="#" id="linkverTodos" class="bton" onclick="mostrarSeccion('lista', event)">
                             Ver todos
                         </a>
                     </li>
                     <li>
-                        <a href="#" id="buscar" class="bton" onclick="mostrarSeccion('buscar', event)">
+                        <a href="#" id="linkbuscar" class="bton" onclick="mostrarSeccion('buscar', event)">
                             Buscar posicion
                         </a>
                     </li>
                     <li>
-                        <a href="#" id="gana" class="bton" onclick="mostrarSeccion('gana')">
+                        <a href="#" id="linkganador" class="bton" onclick="mostrarSeccion('ganador', event)">
                             Ganador rifa
                         </a>
                     </li>   
@@ -81,11 +81,11 @@
             </nav>
         </aside>  
 
-        <section id="agregar" class="seccion"> >
+        <section id="agregar" class="seccion">
             <div id="formulario">
                 <div id="tituloFormulario">
                     <h2>
-                        Agregar Persona
+                        AGREGAR PERSONA
                     </h2>
                     <p>
                         Complete todos los campos. Canciones opcionales (Máx.3).
@@ -140,50 +140,50 @@
                     <div class="artistas"> 
                         <span class="numeroartista">1</span>
                     <label for="artista1"> 
-                        <input type="text" id="artista1" name="artista1" placeholder="Artista" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
+                        <input type="text" id="artista1" name="artista1" placeholder="Artista" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="1" maxlength="64">
                     </label>
                             
                     <label for="cancion1"> 
-                        <input type="text" id="cancion1" name="cancion1" placeholder="Canción" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
+                        <input type="text" id="cancion1" name="cancion1" placeholder="Canción" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="1" maxlength="64">
                     </label>
 
                     <label for="genero1"> 
-                        <input type="text" id="genero1" name="genero1" placeholder="Género" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
+                        <input type="text" id="genero1" name="genero1" placeholder="Género" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="1" maxlength="64">
                     </label>
                 </div>
 
                 <div class="artistas"> 
                         <span class="numeroartista">2</span> 
                     <label for="artista2"> 
-                        <input type="text" id="artista2" name="artista2" placeholder="Artista" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
+                        <input type="text" id="artista2" name="artista2" placeholder="Artista" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="1" maxlength="64">
                     </label>
 
                     <label for="cancion2"> 
-                        <input type="text" id="cancion2" name="cancion2" placeholder="Canción" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
+                        <input type="text" id="cancion2" name="cancion2" placeholder="Canción" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="1" maxlength="64">
                     </label>
 
                     <label for="genero2"> 
-                        <input type="text" id="genero2" name="genero2" placeholder="Género" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
+                        <input type="text" id="genero2" name="genero2" placeholder="Género" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="1" maxlength="64">
                     </label>
                 </div>
                         
                 <div class="artistas"> 
                         <span class="numeroartista">3</span>   
                     <label for="artista3"> 
-                        <input type="text" id="artista3" name="artista3" placeholder="Artista" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
+                        <input type="text" id="artista3" name="artista3" placeholder="Artista" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="1" maxlength="64">
                     </label>
 
                     <label for="cancion3"> 
-                        <input type="text" id="cancion3" name="cancion3" placeholder="Canción" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
+                        <input type="text" id="cancion3" name="cancion3" placeholder="Canción" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="1" maxlength="64">
                     </label>
 
                     <label for="genero3"> 
-                        <input type="text" id="genero3" name="genero3" placeholder="Género" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="4" maxlength="64">
+                        <input type="text" id="genero3" name="genero3" placeholder="Género" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" minlength="1" maxlength="64">
                     </label>
                 </div>     
                 </div>
-                    <button type="submit" form="formPersonas" id="btnAgregar">
-                        Agregar Persona
+                    <button type="button" form="formPersonas" id="btnAgregar" onclick="datosPersonas()">
+                        <p>Agregar Persona</p>
                     </button>
                 </form>      
         </section>
@@ -210,22 +210,26 @@
                     BUSCAR POR POSICION
                 </h3>
 
+                <p>Ingresa la posición (1 al 6) de la persona que deseas consultar.</p>
+
                <form action="" id="formBuscar">     
                 <input type="number" id="posicion" name="posicion"
                 placeholder="Ej: 1" required min="1" max="6">
-                <button type="submit">
+                <button type="button" id="btonBuscar" onclick="buscarPorPosicion()">
                     Buscar
                 </button>
                 </form>
+
+                <div id="resultadoBusqueda"></div>
             </div>
         </section>
 
         <section id="ganador" class="seccion">        
-            <div id="ganador">
+            <div id="ganadorRifa">
                 <h3>
                     GANADOR DE LA RIFA
                 </h3>
-
+                <div id="resultadoRifa"></div>
             </div>
         </section>
 

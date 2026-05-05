@@ -13,7 +13,7 @@
 
   /* Colores principales */
   --color-primario:       #E3072B;
-  --color-primario-hover: #cc2f3c;
+  --color-primario-hover: #eb091c;
   --color-secundario:      #F7F5F5;
   --color-terciario:       #A9A9A9;
 
@@ -165,7 +165,7 @@ nav ul li a {
 }
 
 .bton {
-    display: inline-block;
+    display: block;
     background-color: var(--bg-surface);
     color: var(--color-secundario);
     width: 11rem;
@@ -196,7 +196,7 @@ section {
 
 .seccion.activa {
   display: block;
-}
+} 
 
 .formulario {
     display: flex;
@@ -308,14 +308,19 @@ input {
 
 #btnAgregar {
     margin: 1rem 0 0 5rem;
-    background-color: var(--bg-surface);
+    background-color: var(--color-primario);
     color: var(--color-secundario);
-    width: 11rem;
+    width: 10rem;
     height: 2.5rem;
     padding: 0.6rem 1rem;
     border-radius: var(--radius-sm);
+    border: 0.1rem solid var(--bg-base);
     text-align: center;
     transition: background-color 0.2s ease;
+}
+
+#btnAgregar:hover {
+    background-color: var(--bg-surface-2);
 }
 
 #tarjetas {
@@ -336,4 +341,119 @@ input {
     font-family: var(--font-secundario);
     font-size: clamp(0.875rem, 2vw, 1rem);
     color: var(--color-terciario);
+}
+
+#ContanedorTarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;   
+    gap: 1rem;
+    padding: 3rem 0 0 0;
+    height: 30rem;
+    margin: 0 5rem 0 5rem;
+}
+
+.tarjetas {
+    background-color: var(--bg-surface);
+    border-radius: var(--radius-sm);
+    height: 13rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    color: var(--color-secundario);
+    font-family: var(--font-secundario);
+    font-weight: 200;
+    padding: 1rem;
+    border: 0.1rem solid var(--border-color);
+}
+
+
+#Buscador {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: center;
+    padding: 1rem 0 0 5rem;
+}
+
+#Buscador h3 {
+    font-family: var(--font-secundario);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: var(--color-secundario);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    
+}
+
+#btonBuscar {
+    margin: 1rem;
+    background-color: var(--bg-surface);
+    color: var(--color-secundario);
+    width: 5rem;
+    height: 2.3rem;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 0.1rem solid var(--bg-surface-2);
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+#btonBuscar:hover {
+    background-color: var(--bg-surface-2);
+}
+
+
+#Buscador p {
+    font-family: var(--font-secundario);
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    color: var(--color-terciario);
+}
+
+#resultadoBusqueda {
+    margin-top: 1rem;
+}
+
+.card-resultado {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem 0 2rem 5rem;
+  max-width: 25rem;
+  height: 15rem;
+  gap: 1rem;
+  margin: 3rem 0 0 0.5rem;
+  color: var(--text-primary);
+}
+
+
+
+#ganadorRifa {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: center;
+    padding: 1rem 0 0 5rem;
+}
+
+#ganadorRifa h3 {
+    font-family: var(--font-secundario);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: var(--color-secundario);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+
+.card-rifa {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem 0 2rem 5rem;
+    max-width: 25rem;
+    height: 15rem;
+    gap: 1rem;
+    margin: 3rem 0 0 0.5rem;
+    color: var(--text-primary);
 }
