@@ -58,10 +58,10 @@ function datosPersonas () {
 }
 
 function actualizarContadores() {
-  // contador personas
+  
   document.getElementById('contadorPersonas').querySelector('.numero').textContent = personas.length
 
-  // contador canciones
+  
   const totalCanciones = personas.reduce((acc, persona) => {
     return acc + persona.canciones.length
   }, 0)
